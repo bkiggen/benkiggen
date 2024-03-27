@@ -1,53 +1,54 @@
-import reactLogo from "../../assets/dashboard1.png";
+import powurDashboard from "../../assets/dashboard1.png";
+import scalesNotebook from "../../assets/notebook1.png";
 
 const workItems = [
   {
-    title: "Title",
+    title: "SCALES Law Data Visualizer",
     description:
-      "Entries for Genuary 2020, 31 days of procedural generation with threejs and WebGl.",
+      "SCALES is a data access tool built to help law researchers and lawyers to analyze and visualize data scraped from public government sources. It is built with React/Redux, Node/Express, Python, MongoDB, and PostgreSQL.",
     link: "/",
-    color: "#CDB5DB",
-    image: reactLogo,
+    color: "#2B1713",
+    image: scalesNotebook,
   },
   {
-    title: "Title2",
+    title: "Powur Solar Sales Platform",
     description:
-      "Entries for Genuary 2020, 31 days of procedural generation with threejs and WebGl.",
+      "The Powur Platform supports ~40,000 solar sales and management professionals in the US and Canada. It boasts features such as workflow tracking, messaging, and data visualization to help users bring a solar project from sale to installation. It was built with React/Redux, Node/Express, MongoDB, and PostgreSQL.",
     link: "/",
-    color: "#907880",
-    image: reactLogo,
+    color: "#7A8078",
+    image: powurDashboard,
   },
   {
     title: "Title3",
     description:
       "Entries for Genuary 2020, 31 days of procedural generation with threejs and WebGl.",
     link: "/",
-    color: "#F4E3C3",
-    image: reactLogo,
+    color: "#A9AEA7",
+    image: powurDashboard,
   },
   {
     title: "Title4",
     description:
       "Entries for Genuary 2020, 31 days of procedural generation with threejs and WebGl.",
     link: "/",
-    color: "#B5A6AB",
-    image: reactLogo,
+    color: "#382F39",
+    image: powurDashboard,
   },
   {
     title: "Title5",
     description:
       "Entries for Genuary 2020, 31 days of procedural generation with threejs and WebGl.",
     link: "/",
-    color: "#A8B6BF",
-    image: reactLogo,
+    color: "#7B7A63",
+    image: powurDashboard,
   },
   {
     title: "Title6",
     description:
       "Entries for Genuary 2020, 31 days of procedural generation with threejs and WebGl.",
     link: "/",
-    color: "#DAA034",
-    image: reactLogo,
+    color: "#92848E",
+    image: powurDashboard,
   },
 ];
 

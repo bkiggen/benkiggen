@@ -13,8 +13,6 @@ type WorkCardT = {
 };
 
 const WorkCard = ({ linkTo, title, description, color, image }: WorkCardT) => {
-  const { pathname } = useLocation();
-
   return (
     <Grid
       item
@@ -24,12 +22,6 @@ const WorkCard = ({ linkTo, title, description, color, image }: WorkCardT) => {
       sx={{
         boxSizing: "border-box",
         padding: "3px",
-
-        "&:hover": {
-          "& .cardText": {
-            color: colors.whisperMint,
-          },
-        },
       }}
     >
       <Box>
@@ -57,29 +49,31 @@ const WorkCard = ({ linkTo, title, description, color, image }: WorkCardT) => {
           </Box>
           <Box
             sx={{
-              minHeight: "200px",
               padding: "40px",
               background: color,
               borderRadius: "0 0 2px 2px",
             }}
           >
             <Typography
-              className="cardText"
               variant="h6"
               sx={{
                 color: "white",
-                fontWeight: "600",
-                fontSize: "1.5em",
+                fontWeight: "700",
+                fontSize: "32px",
+                fontFamily: "var(--display-font)",
+                marginBottom: "4px",
               }}
             >
               {title}
             </Typography>
             <Typography
-              className="cardText"
               variant="body1"
               sx={{
                 color: "white",
                 fontWeight: "500",
+                fontSize: "18px",
+                fontFamily: "var(--body-font)",
+                lineHeight: "26px",
               }}
             >
               {description}
