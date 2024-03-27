@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
+import { useStore } from "../../store";
+
 import colors from "../../styles/colors";
 // import NavItem from "./NavItem";
 
@@ -12,6 +14,7 @@ const AppHeader = () => {
   // const { pathname } = useLocation();
   const navigate = useNavigate();
   // const token = localStorage.getItem("userToken");
+  const isShrunk = useStore((state) => state.isShrunk);
 
   const onLogout = async () => {
     navigate("/login");
@@ -21,7 +24,7 @@ const AppHeader = () => {
     <Box
       sx={{
         background: "#1c1c1c",
-        height: "72px",
+        height: isShrunk ? "32px" : "72px",
         width: "calc(100% - 50px)",
         display: "flex",
         alignItems: "center",
@@ -31,6 +34,7 @@ const AppHeader = () => {
         position: "fixed",
         top: 0,
         zIndex: 100,
+        transition: "height 0.3s ease-in-out",
       }}
     >
       <Box
@@ -48,15 +52,23 @@ const AppHeader = () => {
           <Link to="/">
             <Typography
               sx={{
+                display: isShrunk ? "none" : "block",
                 color: colors.darkMint,
                 fontSize: "32px",
                 fontWeight: "600",
+                transition: "font-size 0.3s ease-in-out",
               }}
             >
               benjamin kiggen
             </Typography>
           </Link>
-          <Box sx={{ display: "flex", marginTop: "-4px" }}>
+
+          <Box
+            sx={{
+              display: "flex",
+              marginTop: "-4px",
+            }}
+          >
             <Link to="/">
               <Typography
                 sx={{
@@ -101,7 +113,13 @@ const AppHeader = () => {
           style={{ color: "white", textDecoration: "none" }}
           onClick={onLogout}
         >
-          <GitHubIcon sx={{ color: colors.darkMint, fontSize: "42px" }} />
+          <GitHubIcon
+            sx={{
+              color: colors.darkMint,
+              fontSize: isShrunk ? "32px" : "42px",
+              transition: "font-size 0.3s ease-in-out",
+            }}
+          />
         </Link>
       </Box>
     </Box>

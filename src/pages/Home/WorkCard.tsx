@@ -24,6 +24,12 @@ const WorkCard = ({ linkTo, title, description, color, image }: WorkCardT) => {
       sx={{
         boxSizing: "border-box",
         padding: "3px",
+
+        "&:hover": {
+          "& .cardText": {
+            color: colors.whisperMint,
+          },
+        },
       }}
     >
       <Box>
@@ -58,27 +64,22 @@ const WorkCard = ({ linkTo, title, description, color, image }: WorkCardT) => {
             }}
           >
             <Typography
+              className="cardText"
               variant="h6"
               sx={{
                 color: "white",
                 fontWeight: "600",
                 fontSize: "1.5em",
-                "&:hover": {
-                  color: colors.mint,
-                },
               }}
             >
               {title}
             </Typography>
             <Typography
+              className="cardText"
               variant="body1"
               sx={{
                 color: "white",
                 fontWeight: "500",
-
-                "&:hover": {
-                  color: colors.mint,
-                },
               }}
             >
               {description}

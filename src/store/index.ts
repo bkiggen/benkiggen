@@ -1,9 +1,13 @@
 import { create } from "zustand";
 
-const useStore = create((set) => ({
-  bears: 0,
-  increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-  removeAllBears: () => set({ bears: 0 }),
+type StoreT = {
+  isShrunk: boolean;
+  setIsShrunk: (isShrunk: boolean) => void;
+};
+
+const useStore = create<StoreT>((set) => ({
+  isShrunk: false,
+  setIsShrunk: (isShrunk: boolean) => set({ isShrunk }),
 }));
 
 export { useStore };

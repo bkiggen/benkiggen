@@ -10,7 +10,7 @@ const workItems = [
     image: reactLogo,
   },
   {
-    title: "Title",
+    title: "Title2",
     description:
       "Entries for Genuary 2020, 31 days of procedural generation with threejs and WebGl.",
     link: "/",
@@ -18,7 +18,7 @@ const workItems = [
     image: reactLogo,
   },
   {
-    title: "Title",
+    title: "Title3",
     description:
       "Entries for Genuary 2020, 31 days of procedural generation with threejs and WebGl.",
     link: "/",
@@ -26,7 +26,7 @@ const workItems = [
     image: reactLogo,
   },
   {
-    title: "Title",
+    title: "Title4",
     description:
       "Entries for Genuary 2020, 31 days of procedural generation with threejs and WebGl.",
     link: "/",
@@ -34,7 +34,7 @@ const workItems = [
     image: reactLogo,
   },
   {
-    title: "Title",
+    title: "Title5",
     description:
       "Entries for Genuary 2020, 31 days of procedural generation with threejs and WebGl.",
     link: "/",
@@ -42,7 +42,7 @@ const workItems = [
     image: reactLogo,
   },
   {
-    title: "Title",
+    title: "Title6",
     description:
       "Entries for Genuary 2020, 31 days of procedural generation with threejs and WebGl.",
     link: "/",
